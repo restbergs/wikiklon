@@ -33,9 +33,12 @@
     <title>WikiClon</title>
   </head>
   <header>
-    <img src="./img/wikipedia-logo.png" alt="logo-wikipedia" width="70px" />
+
+    <div class="encabezado"> 
+    <img src="./img/wikipedia-logo.png" alt="logo-wikipedia" width="90px" />
     <h1 class="titulo">Computadora analogica</h1>
   </header>
+</div>
 
   <body>
     <hr />
@@ -57,9 +60,8 @@
       <div class="cuerpo">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/f/f9/What%27s_That_%2830%29.jpg"
-          width="350px"
           alt="compu"
-          style="float: right; padding: 20px; background-color: aliceblue"
+          class="imagen_1"
         />
 
         <p>
@@ -71,26 +73,27 @@
           <a href="">electrónicos</a> o <a href="">mecánicos</a> para modelar el
           problema que se resuelve, utilizando un tipo de representación de
           cantidad física para expresar los valores que conforman el resultado.
-          <br /><br /> 
+          <br /><br />
           Para el modelado se utiliza la analogía existente, en términos
           matemáticos, de algunas situaciones que se dan en diferentes campos.
-          Por ejemplo,   la que existe entre los movimientos oscilatorios en
+          Por ejemplo, la que existe entre los movimientos oscilatorios en
           mecánica y el análisis de corrientes alternas en electricidad. Estos
           dos planteamientos se analizan a través de ecuaciones diferenciales,
           planteando algún tipo de modelo que permite obtener una solución
           satisfactoria. <br /><br />
           Estos dispositivos se usan en contraposición a las computadoras
-          digitales, en las cuales los <mark>fenómenos físicos</mark> o mecánicos son
-          utilizados para construir una máquina de estado finito, que es usada
-          después para modelar elementos llamados instrucciones, que a través de
-          un programa (serie de instrucciones) permite calcular una solución al
-          problema que se desea resolver. Hay un grupo intermedio de
-          computadoras llamadas los computadoras híbridas, en el que un
-          ordenador digital es utilizado para controlar y organizar entradas y
-          salidas hacia y desde dispositivos analógicos anexos; por ejemplo, los
-          dispositivos analógicos podrían ser utilizados para generar valores
-          iniciales para iteraciones. Así, un ábaco sería una computadora
-          digital, y una regla de cálculo un computador analógico. <br /><br />
+          digitales, en las cuales los <mark>fenómenos físicos</mark> o
+          mecánicos son utilizados para construir una máquina de estado finito,
+          que es usada después para modelar elementos llamados instrucciones,
+          que a través de un programa (serie de instrucciones) permite calcular
+          una solución al problema que se desea resolver. Hay un grupo
+          intermedio de computadoras llamadas los computadoras híbridas, en el
+          que un ordenador digital es utilizado para controlar y organizar
+          entradas y salidas hacia y desde dispositivos analógicos anexos; por
+          ejemplo, los dispositivos analógicos podrían ser utilizados para
+          generar valores iniciales para iteraciones. Así, un ábaco sería una
+          computadora digital, y una regla de cálculo un computador analógico.
+          <br /><br />
           Los computadores analógicos ideales operan con números reales y son
           diferenciales, mientras que los computadores digitales se limitan a
           números computables y son algebraicos. Esto significa que los
@@ -106,16 +109,16 @@
           cuales se comportan como números reales, y no como números naturales
           (los cuales permiten representar cantidades discretas y no continuas).
         </p>
-        
+
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Magnavox-Odyssey-Console-Set.png/1920px-Magnavox-Odyssey-Console-Set.png"
           alt="consola"
-          width="300px"
+          class="imagen_2"
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/c/c9/ELWAT.jpg"
           alt="consola"
-          width="300px"
+          class="imagen_2"
         />
         <p>Algunos ejemplos de computadores analógicos son:</p>
         <ul>
@@ -131,15 +134,11 @@
   </body>
 </html>
 
-
-
-<mark></mark>
-
 <style>
   * {
     margin: 0px;
   }
-  header {
+  .encabezado {
     background-color: #f6f6f6;
     display: flex;
     width: 100%;
@@ -147,7 +146,6 @@
     align-items: center;
     height: 100px;
   }
-  
 
   header h1 {
     margin-left: 30px;
@@ -155,26 +153,50 @@
     font-size: 50px;
   }
 
+  .imagen_1 {
+    width: 25%;
+    float: right;
+    padding: 20px;
+    background-color: aliceblue;
+  }
+  .imagen_2 {
+    width: 20%;
+  }
+
   .page-container {
     display: flex;
   }
   .navegacion {
-    width: 335px;
-    min-height:100vh;
+    flex-basis: 100px;
+    min-height: 100vh;
     background-color: #f6f6f6;
     text-align: center;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    align-content: center;
+    flex-shrink: 0;
   }
 
-  .cuerpo{
-    margin:15px;
+  .cuerpo {
+    margin: 15px;
+  
   }
- .cuerpo img{
-    margin:20px;
+  
+  ul {
+    margin: 15px;
   }
-  ul{
-    margin:15px;
+
+  @media screen and (max-width: 800px) {
+    .imagen_1, .imagen_2 {
+      width: 80%;
+      float:none;
+      margin-left:0px;
+      margin-right: 5px;;
+    }
+   header  h1{
+      font-size:30px;
+    }
   }
 </style>
